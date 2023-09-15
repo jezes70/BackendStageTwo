@@ -63,7 +63,7 @@ Deletes a person record by their ID.
   Test Case:
   ```javascript
   it("should create a person", async () => {
-    // Implement test logic here
+
   });
   ```
 
@@ -72,18 +72,17 @@ Deletes a person record by their ID.
   Test Case:
   ```javascript
   it("should handle server error", async () => {
-    // Implement test logic here
+
   });
   ```
 
-### `getPerson` Test Cases
 
 - **Scenario 1:** Successfully retrieve a person by ID.
 
   Test Case:
   ```javascript
   it("should get a person by ID", async () => {
-    // Implement test logic here
+
   });
   ```
 
@@ -92,18 +91,17 @@ Deletes a person record by their ID.
   Test Case:
   ```javascript
   it("should handle person not found", async () => {
-    // Implement test logic here
+
   });
   ```
 
-### `updatePerson` Test Cases
 
 - **Scenario 1:** Successfully update a person by ID.
 
   Test Case:
   ```javascript
   it("should update a person by ID", async () => {
-    // Implement test logic here
+
   });
   ```
 
@@ -112,18 +110,17 @@ Deletes a person record by their ID.
   Test Case:
   ```javascript
   it("should handle person not found during update", async () => {
-    // Implement test logic here
+
   });
   ```
 
-### `deletePerson` Test Cases
 
 - **Scenario 1:** Successfully delete a person by ID.
 
   Test Case:
   ```javascript
   it("should delete a person by ID", async () => {
-    // Implement test logic here
+    
   });
   ```
 
@@ -132,7 +129,7 @@ Deletes a person record by their ID.
   Test Case:
   ```javascript
   it("should handle person not found during deletion", async () => {
-    // Implement test logic here
+    
   });
   ```
 
