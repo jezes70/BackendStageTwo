@@ -2,6 +2,15 @@ import { Request, Response } from "express";
 import Person from "../model/person";
 import { Types as mongooseTypes } from "mongoose";
 
+async function findPersonByField(field: string, value: string) {
+  if (field === "name") {
+    return Person.findOne({ name: value }).exec();
+  } else if (field === "userId") {
+    return Person.findById(value).exec();
+  }
+  return null;
+}
+
 const personController = {
   async createPerson(req: Request, res: Response) {
     try {
@@ -12,13 +21,18 @@ const personController = {
       res.status(500).json({ error: "Server error", msg: error.message });
     }
   },
+
   async getPerson(req: Request, res: Response) {
     try {
-      const { userId } = req.params;
-      const person = await Person.findById(userId);
+      const { param } = req.params;
+      const [key, value] = param.split("=");
+
+      const person = await findPersonByField(key, value);
+
       if (!person) {
         return res.status(404).json({ error: "Person not found" });
       }
+
       res.json(person);
     } catch (error) {
       res.status(500).json({ error: "Server error", msg: error });
