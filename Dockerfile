@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn install -g typescript
+RUN npm install -g typescript
 
 RUN tsc
 
